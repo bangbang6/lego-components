@@ -1,5 +1,4 @@
-import { App } from "vue";
 declare const plugins: {
-    install: (app: App) => void;
+    install: (app: any) => void;
 };
 export default plugins;

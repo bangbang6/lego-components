@@ -20,6 +20,7 @@ const components = [LText, LImage, LShape];
 
 const install = (app: App) => {
   components.forEach((component) => {
+    console.log("component", component.name, component);
     app.component(component.name, component);
   });
 };

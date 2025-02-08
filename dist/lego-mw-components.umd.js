@@ -86,11 +86,11 @@
   const defaultProps$2 = transformToComponentProps(textDefaultProps);
   // array that contains style props
   var script$2 = vue.defineComponent({
-      name: "l-text",
+      name: "l-text2",
       props: {
           tag: {
               type: String,
-              default: "div",
+              default: "p",
           },
           ...defaultProps$2,
       },
@@ -105,20 +105,18 @@
       },
   });
 
-  const _withId$1 = /*#__PURE__*/vue.withScopeId("data-v-6bf95b7a");
-
-  const render$2 = /*#__PURE__*/_withId$1(function render(_ctx, _cache, $props, $setup, $data, $options) {
+  function render$2(_ctx, _cache, $props, $setup, $data, $options) {
     return (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent(_ctx.tag), {
-      style: _ctx.styleProps,
-      class: "l-text-component",
-      onClick: _ctx.handleClick
+      onClick: vue.withModifiers(_ctx.handleClick, ["prevent"]),
+      style: vue.normalizeStyle(_ctx.styleProps),
+      class: "l-text-component"
     }, {
-      default: _withId$1(() => [
+      default: vue.withCtx(() => [
         vue.createTextVNode(vue.toDisplayString(_ctx.text), 1 /* TEXT */)
       ]),
-      _: 1
-    }, 8 /* PROPS */, ["style", "onClick"]))
-  });
+      _: 1 /* STABLE */
+    }, 8 /* PROPS */, ["onClick", "style"]))
+  }
 
   script$2.render = render$2;
   script$2.__scopeId = "data-v-6bf95b7a";
@@ -146,16 +144,16 @@
       },
   });
 
-  const _withId = /*#__PURE__*/vue.withScopeId("data-v-1e970aa2");
+  const _hoisted_1 = ["src"];
 
-  const render$1 = /*#__PURE__*/_withId(function render(_ctx, _cache, $props, $setup, $data, $options) {
-    return (vue.openBlock(), vue.createBlock("img", {
-      style: _ctx.styleProps,
+  function render$1(_ctx, _cache, $props, $setup, $data, $options) {
+    return (vue.openBlock(), vue.createElementBlock("img", {
+      style: vue.normalizeStyle(_ctx.styleProps),
       class: "l-image-component",
-      onClick: _cache[1] || (_cache[1] = vue.withModifiers((...args) => (_ctx.handleClick(...args)), ["prevent"])),
+      onClick: _cache[0] || (_cache[0] = vue.withModifiers((...args) => (_ctx.handleClick && _ctx.handleClick(...args)), ["prevent"])),
       src: _ctx.src
-    }, null, 12 /* STYLE, PROPS */, ["src"]))
-  });
+    }, null, 12 /* STYLE, PROPS */, _hoisted_1))
+  }
 
   script$1.render = render$1;
   script$1.__scopeId = "data-v-1e970aa2";
@@ -184,10 +182,10 @@
   });
 
   function render(_ctx, _cache, $props, $setup, $data, $options) {
-    return (vue.openBlock(), vue.createBlock("div", {
-      style: _ctx.styleProps,
+    return (vue.openBlock(), vue.createElementBlock("div", {
+      style: vue.normalizeStyle(_ctx.styleProps),
       class: "l-shape-component",
-      onClick: _cache[1] || (_cache[1] = vue.withModifiers((...args) => (_ctx.handleClick(...args)), ["prevent"]))
+      onClick: _cache[0] || (_cache[0] = vue.withModifiers((...args) => (_ctx.handleClick && _ctx.handleClick(...args)), ["prevent"]))
     }, null, 4 /* STYLE */))
   }
 
@@ -201,6 +199,7 @@
   const components = [script$2, script$1, script];
   const install = (app) => {
       components.forEach((component) => {
+          console.log("component", component.name, component);
           app.component(component.name, component);
       });
   };

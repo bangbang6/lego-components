@@ -1,9 +1,9 @@
 <template>
   <component
     :is="tag"
+    @click.prevent="handleClick"
     :style="styleProps"
     class="l-text-component"
-    @click="handleClick"
   >
     {{ text }}
   </component>
@@ -19,11 +19,11 @@ import {
 const defaultProps = transformToComponentProps(textDefaultProps);
 // array that contains style props
 export default defineComponent({
-  name: "l-text",
+  name: "l-text2",
   props: {
     tag: {
       type: String,
-      default: "div",
+      default: "p",
     },
     ...defaultProps,
   },
@@ -34,6 +34,7 @@ export default defineComponent({
       props,
       textStylePropNames
     );
+
     return {
       styleProps,
       handleClick,

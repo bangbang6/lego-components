@@ -1,5 +1,5 @@
 {
-  "name": "lego-components",
+  "name": "lego-mw-components",
   "version": "1.0.0",
   "private": false,
   "author": "mengwan",
@@ -19,8 +19,8 @@
       "pre-commit": "npm run lint && npm run test"
     }
   },
-  "main": "dist/lego-bricks.umd.js",
-  "module": "dist/lego-bricks.esm.js",
+  "main": "dist/lego-mw-components.umd.js",
+  "module": "dist/lego-mw-components.esm.js",
   "files": [
     "dist"
   ],
@@ -52,13 +52,13 @@
     "rollup-plugin-typescript2": "^0.29.0",
     "rollup-plugin-vue": "^6.0.0",
     "typescript": "~3.9.3",
-    "vue": "^3.0.0",
+    "vue": "^3.5.13",
     "vue-jest": "^5.0.0-0"
   },
   "peerDependencies": {
     "vue": "^3.0.0"
   },
-  "homepage": "https://github.com/imooc-lego/lego-components",
+  "homepage": "https://github.com/imooc-lego/lego-mw-components",
   "keywords": [
     "Component",
     "UI",
@@ -67,7 +67,8 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/imooc-lego/lego-components"
+    "url": "https://github.com/imooc-lego/lego-mw-components"
   },
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts"
 }
