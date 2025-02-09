@@ -23,7 +23,7 @@ export default defineComponent({
   props: {
     tag: {
       type: String,
-      default: "p",
+      default: "div",
     },
     ...defaultProps,
   },

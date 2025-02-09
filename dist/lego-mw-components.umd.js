@@ -90,7 +90,7 @@
       props: {
           tag: {
               type: String,
-              default: "p",
+              default: "div",
           },
           ...defaultProps$2,
       },

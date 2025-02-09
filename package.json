@@ -1,6 +1,6 @@
 {
   "name": "lego-mw-components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "author": "mengwan",
   "scripts": {
@@ -53,7 +53,8 @@
     "ts-jest": "^27.0.4",
     "typescript": "^5.7.3",
     "vue": "^3.5.13",
-    "vue-jest": "^5.0.0-0"
+    "vue-jest": "^5.0.0-0",
+    "vue3-jest": "^27.0.0-alpha.1"
   },
   "peerDependencies": {
     "vue": "^3.0.0"
